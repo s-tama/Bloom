@@ -1,5 +1,5 @@
-﻿// ぼかし用
-Shader "MyProject/Blur"
+﻿// ぼかしに加算処理を追加
+Shader "MyProject/AddBlur"
 {
 	Properties
 	{
@@ -61,6 +61,8 @@ Shader "MyProject/Blur"
 
 		Pass
 		{
+			Blend One One
+
 			CGPROGRAM
 			fixed4 frag(v2f i) : SV_Target
 			{
